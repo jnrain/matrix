@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width; initial-scale=1.0" name="viewport">
+	<title>Project Matrix-v0.1</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="media-queries.css">
+	<script type="text/javascript">
+function options(){
+			var button = document.getElementById("button");
+			button.onclick = handle;
+		}
+		function handle(){
+			var option1 = document.getElementById("option1");
+			var option2 = document.getElementById("option2");
+			var option3 = document.getElementById("option3");
+			var option4 = document.getElementById("option4");
+			var option5 = document.getElementById("option5");
+			var option6 = document.getElementById("option6");
+			var select =[option1.selected,option2.selected,option3.selected,option4.selected,option5.selected,option6.selected];
+
+			var text =["出来体育馆后，向背对体育馆的方向直走，直到左边是文浩馆时，向右拐直走即可","出来体育馆后，向右走，直到体育馆的正门，向左拐，直走到第一个路口，向右拐，直走到第一个路口，向左拐直走即可","出来体育馆后，向右走，直到体育馆的正门，向左拐，直走到第一个路口，向右拐直走即可","出来体育馆后，向背对体育馆的方向直走，直到左边是文浩馆时，向右拐直走即可","出来体育馆后，向背对体育馆的方向直走，过桥后右拐即可","给我好好选"];
+
+			for (var i=0 ; i<select.length ; i++)
+			{
+				var bull = select[i];
+				var word = text[i];
+				var p = document.getElementById("pp");
+				if (bull == true)
+					p.innerHTML = word;
+			}
+		}
+		window.onload = options;
+	</script>
+</head>
+<body>
+	<div id="pagewrap">
+		<header id="header">
+			<hgroup>
+				<h1 id="site-logo">
+					<img src="logo.png">
+				</h1>
+				<h2 id="site-description">听雨矩阵 v0.1</h2>
+			</hgroup>
+			<nav>
+				<ul id="main-nav" class="clearfix">
+					<li>
+						<a href="">主页</a>
+					</li>
+					<li>
+						<a href="">位置</a>
+					</li>
+					<li>
+                        <a href="http://www.jnrain.com">关于我们</a>
+					</li>
+					<li>
+						<a href="">其他</a>
+					</li>
+				</ul>
+			</nav>
+			<form id="searchform">
+				<input id="s" type="search" placeholder="搜索">
+			</form>
+		</header>
+		<div id="content">
+			<article class="post clearfix">
+				<header>
+					<h1 class="post-title">
+						<a href="">我现在位于哪里呢:</a>
+					</h1>
+				</header>
+				<p>江南大学阳光晨跑体育场刷卡点</p>				
+			</article>
+			<article>
+				<header>
+					<h1 class="post-title">
+						<a href="">我现在要去哪里呢:</a>
+					</h1>
+				</header>
+				<select id="select">
+					<option id="option1">图书馆</option>
+					<option id="option2">江南苑</option>
+					<option id="option3">北门</option>
+					<option id="option4">一教</option>
+					<option id="option5">二教</option>
+					<option id="option6" selected="selected">我在卖萌</option>
+				</select>
+				<button id="button">选好了</button>
+				<div>
+					<p id="pp"></p>
+				</div>
+			</article>
+		</div>
+        <aside id="sidebar"><a id="1"></a>
+			<section class="widget">
+				<h1 class="widgettitle">附近节点：</h1>
+				<ul>
+					<li>
+						<a href="PMweb2.html">北大门</a>
+					</li>
+					<li>
+						<a href="PMweb3.html">第一教学楼</a>
+					</li>
+					<li>
+						<a href="PMweb4.html">江南苑</a>
+					</li>
+					<li>
+						<a href="PMweb5.html">第二教学楼</a>
+					</li>
+				</ul>
+			</section>
+		</aside>
+		<footer id="footer">
+			<p>Powered by
+				<a href="http://www.jnrain.com">JNrainerd-WIOS</a>
+			</p>
+		</footer>
+	</div>
+</body>
+</html>
