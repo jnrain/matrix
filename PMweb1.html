@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width; initial-scale=1.0" name="viewport">
+	<title>Project Matrix-v0.1</title>
+
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="media-queries.css">
+
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div id="pagewrap">
+		<header id="header">
+			<hgroup>
+				<h1 id="site-logo">
+					<img src="logo.png">
+				</h1>
+				<h2 id="site-description">听雨矩阵 v0.1</h2>
+			</hgroup>
+			<nav>
+				<ul id="main-nav" class="clearfix">
+					<li>
+						<a href="">主页</a>
+					</li>
+					<li>
+						<a href="">位置</a>
+					</li>
+					<li>
+                        <a href="http://www.jnrain.com">关于我们</a>
+					</li>
+					<li>
+						<a href="">其他</a>
+					</li>
+				</ul>
+			</nav>
+			<form id="searchform">
+				<input id="s" type="search" placeholder="搜索">
+			</form>
+		</header>
+		<div id="content">
+			<article class="post clearfix">
+				<header>
+					<h1 class="post-title">
+						<a href="">我现在位于哪里呢:</a>
+					</h1>
+				</header>
+				<p>江南大学阳光晨跑体育场刷卡点</p>				
+			</article>
+			<article>
+				<header>
+					<h1 class="post-title">
+						<a href="">我现在要去哪里呢:</a>
+					</h1>
+				</header>
+				<select id="target-locations">
+					<option value="0">图书馆</option>
+					<option value="1">江南苑</option>
+					<option value="2">北门</option>
+					<option value="3">一教</option>
+					<option value="4">二教</option>
+					<option value="5" selected="selected">我在卖萌</option>
+				</select>
+				<button id="update-target-location">选好了</button>
+				<p id="guide-message"></p>
+			</article>
+		</div>
+        <aside id="sidebar"><a id="1"></a>
+			<section class="widget">
+				<h1 class="widgettitle">附近节点：</h1>
+				<ul>
+					<li>
+						<a href="PMweb2.html">北大门</a>
+					</li>
+					<li>
+						<a href="PMweb3.html">第一教学楼</a>
+					</li>
+					<li>
+						<a href="PMweb4.html">江南苑</a>
+					</li>
+					<li>
+						<a href="PMweb5.html">第二教学楼</a>
+					</li>
+				</ul>
+			</section>
+		</aside>
+		<footer id="footer">
+			<p>Powered by
+				<a href="http://www.jnrain.com">JNrainerd-WIOS</a>
+			</p>
+		</footer>
+	</div>
+	<script src="guidemsg.js" async="async"></script>
+</body>
+</html>
