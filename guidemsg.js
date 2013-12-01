@@ -1,16 +1,16 @@
 (function() {
-	'use strict';
-	$().ready(function() {
-		$('#update-target-location').click(function() {
-			$.getJSON("guideInfomation.json",function(data){
-				$.each(data,function(idx,info){
+    'use strict';
+    $().ready(function(){
+    $.getJSON("guideInfomation.json",function(data){
+        var guideData = {};
+            $.each(data,function(idx,info){
+                guideData[info.id] = info.infomation;
+                $('#update-target-location').click(function(){
 					var i;
 					i = $('#target-locations').val();
-					if (info.id==i){
-						$('#guide-message').text(info.infomation);
-					}
+					$('#guide-message').text(guideData[i]);
 				});
-			});
+            });
 		});
 	});
 })();
